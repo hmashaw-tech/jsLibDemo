@@ -1,0 +1,53 @@
+{
+  "name": "jslibdemo",
+  "version": "1.0.0",
+  "description": "JavaScript Library Demo",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "test": "nyc mocha",
+    "validate": "npm-run-all lint test",
+    "watch:test": "mocha --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-hs4706:hmashaw-tech/jsLibDemo.git"
+  },
+  "author": "Mark Shaw",
+  "license": "MIT",
+  "keywords": [
+    "JavaScript",
+    "Demo"
+  ],
+  "dependencies": {
+    "unique-random-array": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-plugin-mocha": "^5.0.0",
+    "ghooks": "^2.0.2",
+    "mocha": "^5.0.5",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^11.6.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "statements": 100,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100,
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "include": [
+      "src"
+    ]
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run validate"
+    }
+  }
+}
