@@ -1,7 +1,7 @@
 {
   "name": "jslibdemo",
   "version": "1.0.0",
-  "description": "JavaScript Library Demo",
+  "description": "JavaScript Library Demo - bestKids",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint ./src",
