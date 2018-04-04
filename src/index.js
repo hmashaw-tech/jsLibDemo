@@ -7,8 +7,8 @@
 /* eslint func-style: ["error", "declaration"] */
 /* eslint-disable sort-keys */
 
-var uniqueRandomArray = require('unique-random-array')
-var starWarsNames = require('./starwars-names.json')
+const uniqueRandomArray = require('unique-random-array')
+const kidsNames = require('./kids-names.json')
 
 /**
  * A Code Coverage demostration.
@@ -21,8 +21,10 @@ function codeCoverageDemo () {
 
 }
 
-module.exports = {
-    names: starWarsNames,
-    random: uniqueRandomArray(starWarsNames),
+const publicAPI = {
+    allKids: kidsNames,
+    oneKid: uniqueRandomArray(kidsNames),
     ccd: codeCoverageDemo
 }
+
+module.exports = publicAPI

@@ -12,7 +12,7 @@
 
 const {expect} = require('chai')
 
-const starWarsNames = require('../src/index')
+const kidNames = require('../src/index')
 const minListSize = 1
 const NOT_FOUND = -1
 
@@ -28,28 +28,28 @@ function isArrayOfString (array) {
 }
 
 
-describe('starwars-names', () => {
+describe('kids-names', () => {
 
     it('should return an array of all available names', () => {
 
-        expect(starWarsNames.names.length).to.be.greaterThan(minListSize)
-        expect(isArrayOfString(starWarsNames.names)).to.be.true
+        expect(kidNames.allKids.length).to.be.greaterThan(minListSize)
+        expect(isArrayOfString(kidNames.allKids)).to.be.true
 
     })
 
 
     it('should return a single random name from all available names', () => {
 
-        const randomName = starWarsNames.random()
+        const randomName = kidNames.oneKid()
 
-        expect(randomName).to.satisfies((name) => starWarsNames.names.indexOf(name) !== NOT_FOUND)
+        expect(randomName).to.satisfies((name) => kidNames.allKids.indexOf(name) !== NOT_FOUND)
 
     })
 
 
     it('completes code coverage requirement', () => {
 
-        const ccd = starWarsNames.ccd()
+        const ccd = kidNames.ccd()
 
         expect(ccd).to.be.true
 
