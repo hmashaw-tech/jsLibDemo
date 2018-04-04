@@ -59,3 +59,6 @@ typings/
 
 # Misc
 *_
+dist
+package
+*.tgz
