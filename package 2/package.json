@@ -1,5 +1,5 @@
 {
-  "name": "@hmashaw/jslibdemo",
+  "name": "jslibdemo",
   "version": "1.0.0",
   "description": "JavaScript Library Demo - bestKids",
   "main": "dist/index.js",
